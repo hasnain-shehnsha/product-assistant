@@ -32,32 +32,46 @@ MONGODB_DB_NAME=chat_db
 
 ---
 
-## 🚀 GitHub Push Instructions
+## ⚙️ Installation & Setup
 
-Follow these exact terminal commands to push this project to a new GitHub repository:
-
-### 1. Initialize Git and add files
+### 1. Clone the Repository
 ```bash
-# Initialize a fresh git repository
-git init
-
-# Add all files (the .gitignore will automatically prevent .env and venv from being added)
-git add .
-
-# Commit the files
-git commit -m "Initial commit: Production-ready RAG chatbot"
+git clone https://github.com/hasnain-shehnsha/product-assistant.git
+cd product-assistant
 ```
 
-### 2. Connect to GitHub and Push
-*Before running this, go to GitHub.com, click "New Repository", give it a name (e.g., `rag-product-assistant`), and DO NOT initialize it with a README or gitignore.*
-
+### 2. Backend Setup (FastAPI)
+Navigate to the backend directory and set up your Python environment:
 ```bash
-# Link your local code to your new GitHub repository (replace URL with your actual repo URL)
-git remote add origin https://github.com/your-username/your-repo-name.git
-
-# Set the main branch
-git branch -M main
-
-# Push the code to GitHub
-git push -u origin main
+cd backend
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
 ```
+
+### 3. Frontend Setup (React/Vite)
+Open a new terminal, navigate to the frontend directory, and install Node dependencies:
+```bash
+cd frontend
+npm install
+```
+
+---
+
+## ▶️ Running the Application
+
+To run the full application, you need to start both the backend and frontend development servers.
+
+### Start the Backend
+In your backend terminal (with the virtual environment activated):
+```bash
+uvicorn app.main:app --reload
+```
+*The API will be available at http://127.0.0.1:8000*
+
+### Start the Frontend
+In your frontend terminal:
+```bash
+npm run dev
+```
+*The UI will be available at http://localhost:5173*

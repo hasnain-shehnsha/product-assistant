@@ -1,0 +1,40 @@
+# Virtual Environments
+venv/
+env/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables & Secrets
+.env
+*.env
+.env.local
+.env.development
+.env.production
+secret/
+credentials.json
+
+# Node.js
+node_modules/
+dist/
+build/
+.npm/
+package-lock.json
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and Testing
+*.log
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Temporary files
+scratch/
+tmp/
+*.tmp
